@@ -52,6 +52,10 @@
         case $path === "/tpPizzeria/blog":
             include './ctrl/ctrl_blog.php';
             break;
+        // route /tpPizzeria/article ->  ./ctrl/ctrl_article.php
+        case $path === "/tpPizzeria/article":
+            include './ctrl/ctrl_article.php';
+            break;
         // route /tpPizzeria/addArticle ->  ./ctrl/ctrl_add_article.php
         case $path === "/tpPizzeria/addArticle":
             include './ctrl/ctrl_add_article.php';
