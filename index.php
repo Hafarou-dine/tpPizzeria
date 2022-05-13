@@ -21,6 +21,7 @@
     else{
         include './view/header_visiteur.php';
     }
+
     
 
     /* ------------------------------ ROUTER ------------------------------ */
@@ -94,7 +95,7 @@
             break;
         // route /tpPizzeria/contact ->  ./ctrl/ctrl_contact.php
         case $path === "/tpPizzeria/contact":
-            include './ctrl/view_contact.php';
+            include './view/view_contact.php';
             break;
         // route /tpPizzeria/ ->  ./view/view_accueil.php
         case $path === "/tpPizzeria/":

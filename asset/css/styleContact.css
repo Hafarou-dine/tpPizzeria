@@ -1,0 +1,9 @@
+#carte{
+    width: 100vh;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+span{
+    color: red;
+}
