@@ -60,9 +60,9 @@
         case $path === "/tpPizzeria/addArticle":
             include './ctrl/ctrl_add_article.php';
             break;
-        // route /tpPizzeria/updateArticle ->  ./ctrl/ctrl_add_article.php
+        // route /tpPizzeria/updateArticle ->  ./ctrl/ctrl_update_article.php
         case $path === "/tpPizzeria/updateArticle":
-            include './ctrl/ctrl_add_article.php';
+            include './ctrl/ctrl_update_article.php';
             break;
         // route /tpPizzeria/addProduit ->  ./ctrl/ctrl_add_produit.php
         case $path === "/tpPizzeria/addProduit":
@@ -92,9 +92,9 @@
         case $path === "/tpPizzeria/panier":
             include './ctrl/ctrl_panier.php';
             break;
-        // route /tpPizzeria/contact ->  ./ctrl/ctrl_contact.php
+        // route /tpPizzeria/contact ->  ./view/ctrl_contact.php
         case $path === "/tpPizzeria/contact":
-            include './ctrl/view_contact.php';
+            include './view/view_contact.php';
             break;
         // route /tpPizzeria/ ->  ./view/view_accueil.php
         case $path === "/tpPizzeria/":

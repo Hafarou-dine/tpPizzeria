@@ -7,7 +7,7 @@
     <title>Jeff Pizza</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100" style="background-color: #C5D3C5;">
     <header>
         <nav class="navbar navbar-expand-lg" style="background-color: #1A621A;">
             <div class="container-fluid">
