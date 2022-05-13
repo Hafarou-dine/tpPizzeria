@@ -10,18 +10,17 @@
     <title>Jeff Pizza</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-white mx-5 shadow p-3 mb-3 bg-body rounded">
   <div class="container-fluid">
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse d-flex justify-content-evenly" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" href="#pizza">Pizza</a>
-        <a class="nav-link active" href="#pizzaCuston">Pizza Custom</a>
-        <a class="nav-link active" href="#sauce">Sauce</a>
-        <a class="nav-link active" href="#entree">Entrée</a>
-        <a class="nav-link active" href="#dessert">Déssert</a>
-        <a class="nav-link active" href="#menu">Menu</a>
-        <a class="nav-link active" href="#boisson">Boissons</a>
-    
+        <a class="nav-link active fs-5 mx-5" href="#pizza">Pizza</a>
+        <a class="nav-link active fs-5 mx-5" href="#pizzaCuston">Pizza Custom</a>
+        <a class="nav-link active fs-5 mx-5" href="#sauce">Sauce</a>
+        <a class="nav-link active fs-5 mx-5" href="#entree">Entrée</a>
+        <a class="nav-link active fs-5 mx-5" href="#dessert">Déssert</a>
+        <a class="nav-link active fs-5 mx-5" href="#menu">Menu</a>
+        <a class="nav-link active fs-5 mx-5" href="#boisson">Boissons</a>
       </div>
     </div>
   </div>
