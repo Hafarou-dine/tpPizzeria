@@ -1,0 +1,17 @@
+#liste{
+    display: grid;
+    grid-template-columns: 20% 1fr;
+}
+#nom{
+    display:flex;
+    justify-content: center;
+}
+li{
+    border-radius: 10px;
+}
+
+#Vrt{
+    border-radius: 5px;
+    background-color: #1A621A;
+    color: white;
+}
