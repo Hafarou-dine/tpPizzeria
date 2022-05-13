@@ -9,17 +9,16 @@
 </head>
 
 <body>
-    <form action="" method="POST">
-        <h2>Ajouter un Ingrédient</h2>
-        <div class="mb-3">
-            <input type="text" class="" name="nom_ing" id="addIngred" placeholder="Nom">
+    <div class="container-fluid w-50">
+        <div class="m-5">
+            <h1 class="m-3 text-center">Ajouter un ingredient</h1>
+            <form action="" method="post">
+                <p>Nom de l'ingredient :<input type="text" name="nom_ing" class="form-control" style="width:400px" ></p>
+                <p>Prix de l'ingredient :<input type="text" name="prix_ing" class="form-control" style="width:400px" ></p>
+                <input type="submit" value="Ajouter" name="add" class="m-1">
+            </form>
         </div>
-        <div class="mb-3">
-            <input class="contentIngred" name="prix_ing" placeholder="Prix">
-        </div>
-        <p><input type="submit" name="add" value="Ajouter"></p>
-    </form>
-
+    </div>
 </body>
-
 </html>
+
