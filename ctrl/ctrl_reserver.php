@@ -1,8 +1,7 @@
 <?php
     /* ------------------------------ IMPORT VIEW ------------------------------ */
-    include './view/view_connexion.php';
+    include './view/view_reserver.php';
 
     /* ------------------------------ LOGIQUE ------------------------------ */
 
 ?>
-
