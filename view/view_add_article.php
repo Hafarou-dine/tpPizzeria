@@ -7,30 +7,19 @@
     <title>Jeff Pizza</title>
 </head>
 <body>
-<div><h1>Ajoutez un article</div>
-<form>
-    <div>
-        <input type="text" name="Titre de l'article">Titre de l'article</input>
+    <div class="container-fluid w-50">
+        <div class="m-5">
+            <h1 class="m-3 text-center">Ajouter un article</h1>
+            <form action="" method="post">
+                <p>Titre de l'article :<input type="text" name="titre_art" class="form-control" style="width:400px" ></p>
+                <p>contenu de l'article :<textarea name="contenu_art" class="form-control" cols="50" rows="10" ></textarea></p>
+                <p><input type="file" name="img_art_1" class="form-control"></p>
+                <p><input type="file" name="img_art_1" class="form-control"></p>
+                <p><input type="file" name="img_art_1" class="form-control"></p>
+                <input type="submit" value="Ajouter" name="add" class="m-1">
+            </form>
+        </div>
     </div>
-    <div>
-        <input type="text" name="Contenu de l'article">Contenu
-         de l'article</input>
-    </div>
-    <div>
-        <label for="file">Ajoutez un image</label>
-        <input type="file" id="imgArt1" name="imageArt" accept="image/png, image/jpeg">
-    </div>
-    <div>
-        <label for="file">Ajoutez un image</label>
-        <input type="file" id="imgArt2" name="imageArt" accept="image/png, image/jpeg">
-    </div>
-    <div>
-        <label for="file">Ajoutez un image</label>
-        <input type="file" id="imgArt3" name="imageArt" accept="image/png, image/jpeg">
-    </div>
-    <div>
-    <input type="submit" name="ajouter">ajouter</input>
-    </div>
-</form>
 </body>
 </html>
+

@@ -9,19 +9,17 @@
     <link rel="stylesheet" href="./asset/css/article.css">
     <title>Jeff Pizza</title>
 </head>
-<body style="color:#912727">
-<div class="container-fluid w-50">
-    <div class="m-5">
-      <h1 class="m-3">Ajouter un Produit</h1>
-      <form action="" method="post">
-        <p>Nom du Produit :<input type="text" class="form-control" style="width:350px" name="nom_produit"></p>
-        <p>Description du Produit : <textarea class="form-control" rows="6"></textarea></p>
-        <p>Prix du Produit :<input type="text" class="form-control" style="width:150px" name="nom_produit"></p>
-        <input id="Vrt" type="submit" value="Voir Article" name="voir_article" class="m-1">
-      </form>
+<body>
+    <div class="container-fluid w-50">
+        <div class="m-5">
+            <h1 class="m-3 text-center">Ajouter un produit</h1>
+            <form action="" method="post">
+                <p>Nom du Produit :<input type="text" class="form-control" style="width:400px" name="nom_prod"></p>
+                <p>Description du Produit :<textarea class="form-control" rows="6"></textarea></p>
+                <p>Prix du Produit :<input type="text" class="form-control" style="width:200px" name="nom_prod"></p>
+                <input id="vrt" type="submit" value="Ajouter" name="add" class="m-1">
+            </form>
+        </div>
     </div>
-  </div>
-
-</form>
 </body>
 </html>

@@ -4,8 +4,16 @@
 
 
     /* ------------------------------ IMPORT MODELS & UTILITAIRES ------------------------------ */
+    include './model/model_article.php';
+    include './model/model_commander.php';
+    include './model/model_commentaire.php';
+    include './model/model_composer.php';
+    include './model/model_droit.php';
+    include './model/model_ingredient.php';
+    include './model/model_produit.php';
+    include './model/model_reservation.php';
+    include './model/model_type.php';
     include './model/model_utilisateur.php';
-    
     include './utils/connectBDD.php';
     include './utils/fonctions.php';
 
