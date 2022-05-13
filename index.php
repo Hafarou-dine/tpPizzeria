@@ -63,7 +63,7 @@
             break;
         // route /tpPizzeria/updateArticle ->  ./ctrl/ctrl_add_article.php
         case $path === "/tpPizzeria/updateArticle":
-            include './ctrl/ctrl_add_article.php';
+            include './ctrl/ctrl_update_article.php';
             break;
         // route /tpPizzeria/addProduit ->  ./ctrl/ctrl_add_produit.php
         case $path === "/tpPizzeria/addProduit":
