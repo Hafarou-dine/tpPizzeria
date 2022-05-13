@@ -7,6 +7,6 @@
         unset($_COOKIE['PHPSESSID']);
     }
     // on redirige vers la page de connexion
-    header('Location:/tpblog/login');
+    header('Location:/tpPizzeria/');
 ?>
 
