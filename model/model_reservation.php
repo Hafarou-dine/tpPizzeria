@@ -65,7 +65,7 @@
             $this->date = $date;
         }
 
-        public function getNbrCouv():string{
+        public function getNbrCouv():int{
             return $this->nbr_couv;
         }
         

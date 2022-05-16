@@ -69,7 +69,7 @@
         /**
          * Get the value of img1
          */ 
-        public function getImg1():string{
+        public function getImg1(){
             return $this->img_art_1;
         }
 
@@ -83,7 +83,7 @@
         /**
          * Get the value of img2
          */ 
-        public function getImg2():string{
+        public function getImg2(){
                 return $this->img_art_2;
         }
 
@@ -97,7 +97,7 @@
         /**
          * Get the value of img3
          */ 
-        public function getImg3():string{
+        public function getImg3(){
             return $this->img_art_3;
         }
 
@@ -200,7 +200,7 @@
         public function getArticleById($bdd){
             try{
                 $req = $bdd->prepare('SELECT * FROM article 
-                WHERE id_art = :id_art');
+                WHERE id_art = :id_art;');
                 $req->execute(array(
                     "id_art" => $this->getId(),
                 ));
@@ -214,7 +214,7 @@
         // Fonction qui renvoie tous les articles
         public function getAllArticle($bdd){
             try{
-                $req = $bdd->prepare('SELECT * FROM article');
+                $req = $bdd->prepare('SELECT * FROM article;');
                 $req->execute();
                 return $req->fetchAll(PDO::FETCH_OBJ);
             }

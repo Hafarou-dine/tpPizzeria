@@ -8,7 +8,7 @@
     <title>Jeff Pizza</title>
 </head>
 <body>
-    <h2 class="text-center my-5">Liste des Ingrédients</h2>
+    <h2 class="text-center my-5">Liste des ingrédients</h2>
 </body>
 </html>
 

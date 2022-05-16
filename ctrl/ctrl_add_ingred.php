@@ -1,27 +1,25 @@
 <?php
-    /* ------------------------------ IMPORT VIEW ------------------------------ */
-    include './view/view_add_ingred.php';
+   /* ------------------------------ IMPORT VIEW ------------------------------ */
+   include './view/view_add_ingred.php';
 
-    /* ------------------------------ LOGIQUE ------------------------------ */
-    $msg = "Ajoutez un ingrédient";
-    $ing = new Ingredient(null, null);
- //test si le bouton ajouté est cliqué
- if(isset($_POST['add'])){
-     //test si les champs sont rempli
-     if(isset($_POST['nom_ing']) AND isset($_POST['prix_ing']) AND 
-     $_POST['nom_ing'] != "" AND $_POST['prix_ing'] !=""){
-         //instancier un nouvel objet Ingredient (appel au constructeur)
-         $ingredient = new Ingredient($_POST['nom_ing'], $_POST['prix_ing']);
-         //appel à la méthode addIgredients de la classe igredients
-         $ingredient->addIngred($bdd);
-         //utiliser le getter pour afficher le nom
-      $msg = ''.$_POST['nom_ing'].' à été ajouté';
-     }
-     else{
-        $msg = 'Veuillez remplir les champs du formulaire';
-     }
-}  
-//  /Affichage en JS des Messages 
-echo "<script>zoneMsg.innerHTML = '$msg'</script>"; 
+   /* ------------------------------ LOGIQUE ------------------------------ */
+   if(isset($_SESSION['droit']) && ($_SESSION['droit'] == 1)){
+      //test si on a cliquer sur le bouton ajouter
+      if(isset($_POST['add'])){
+         //test si les champs sont rempli
+         if($_POST['nom_ing'] != "" && $_POST['prix_ing'] !=""){
+            $nom = ucfirst(mb_strtolower($_POST['nom_ing'], "UTF-8"));
+            $prix = $_POST['prix_ing'];
+            //instancier un nouvel objet Ingredient (appel au constructeur)
+            $new = new Ingredient($nom, $prix);
+            //appel à la méthode addIgred() de la classe igredient
+            $new->addIngred($bdd);
+            echo '<div class="d-flex justify-content-center"><p class="mt-3 mb-5 py-3 bg-success text-center fs-5 w-75">L\'ingredient '.$nom.' à été ajouté en BDD</p></div>';
+         }
+      }
+   }
+   else{
+      redirection("/tpPizzeria/connexion", "0");
+   }
 ?>
 

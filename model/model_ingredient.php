@@ -31,7 +31,7 @@
             $this->nom = $nom;
         }
 
-        public function getPrix():int{
+        public function getPrix():float{
             return $this->prix;
         }
 

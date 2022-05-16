@@ -3,12 +3,13 @@
     include './view/view_update_produit.php'; 
 
     /* ------------------------------ LOGIQUE ------------------------------ */
-
     $type = new Type(null);
     $listeType = $type->showAllType($bdd);
-    
     foreach($listeType as $value){
-        echo '<script>addOption("'.$value->nom_type.'","'.$value->id_type.'")</script>';
+        echo '
+        <script>
+            addOption("'.$value->nom_type.'", "'.$value->id_type.'");
+        </script>';
     }
 
 
@@ -19,7 +20,7 @@ var_dump($produitModif);
 echo ''.$produitModif->prix_prod.'';
 
 
-if (isset($_GET['id'])) {
+if(isset($_GET['id'])) {
 
     echo'<div class="container-fluid w-75">
         <div class="m-5">

@@ -11,7 +11,7 @@
 
 
         /* ---------------------------------------- CONSTRUCTEUR ---------------------------------------- */
-        public function __construct($id, $nom, $desc, $img, $prix, $type){
+        public function __construct($nom, $desc, $img, $prix, $type){
             $this->nom = $nom;
             $this->desc = $desc;
             $this->img = $img;
@@ -46,7 +46,7 @@
             $this->desc = $desc;
         }
 
-        public function getImg():string{
+        public function getImg(){
             return $this->img;
         }
 

@@ -12,8 +12,8 @@
             <h1 class="m-5 text-center">Modifier un article</h1>
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="container shadow p-5 mb-5 bg-body rounded">
-                    <p>Titre de l'article :<input type="text" name="titre_art" class="form-control"></p>
-                    <p>Contenu de l'article :<textarea name="contenu_art" class="form-control" cols="50" rows="10"></textarea></p>
+                    <p>Titre de l'article :<input type="text" id="titre" name="titre_art" class="form-control" required></p>
+                    <p>Contenu de l'article :<textarea id="cont" name="contenu_art" class="form-control" cols="50" rows="10" required></textarea></p>
                     <p><input type="file" name="img_art_1" class="form-control"></p>
                     <p><input type="file" name="img_art_1" class="form-control"></p>
                     <p><input type="file" name="img_art_1" class="form-control"></p>
@@ -24,6 +24,7 @@
             </form>
         </div>
     </div>
+    <script src="./asset/js/script.js"></script>
 </body>
 </html>
 

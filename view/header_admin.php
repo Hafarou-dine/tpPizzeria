@@ -25,13 +25,13 @@
                         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle fs-4" href="#" id="navbarDarkDropdownMenuLink" style="color: white;" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="">Ajouter Article</a></li>
-                                    <li><a class="dropdown-item" href="">Ajouter produit</a></li>
-                                    <li><a class="dropdown-item" href="">Ajouter Ingredient</a></li>
-                                    <li><a class="dropdown-item" href="">Liste Ingredient</a></li>
-                                </ul>
+                                    <a class="nav-link dropdown-toggle fs-4" href="#" id="navbarDarkDropdownMenuLink" style="color: white;" role="button" data-bs-toggle="dropdown" aria-expanded="false">Admin</a>
+                                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="/tpPizzeria/addArticle">Ajouter Article</a></li>
+                                        <li><a class="dropdown-item" href="/tpPizzeria/addProduit">Ajouter produit</a></li>
+                                        <li><a class="dropdown-item" href="/tpPizzeria/addIngred">Ajouter Ingredient</a></li>
+                                        <li><a class="dropdown-item" href="/tpPizzeria/allIngred">Liste Ingredient</a></li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
