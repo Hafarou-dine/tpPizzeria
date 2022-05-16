@@ -20,7 +20,7 @@
 
     /* ------------------------------ IMPORT HEADERS ------------------------------ */
     if(isset($_SESSION['connected'])){
-        if(isset($_SESSION['role']) && ($_SESSION['role'] == 1)){
+        if(($_SESSION['droit'] == 1)){
             include './view/header_admin.php';
         }
         else{

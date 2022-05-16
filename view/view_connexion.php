@@ -18,14 +18,14 @@
                     <h2 class="text-center mb-5">Connexion</h2>
                     <div class="mb-3">
                         <label for="email" class="form-label">E-mail :</label>
-                        <input type="email" class="form-control" id="email" name="mail_util">
+                        <input type="email" class="form-control" id="email" name="mail_util" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
                     </div>
                     <div class="mb-3">
                         <label for="pwd" class="form-label">Mot de passe :</label>
-                        <input type="password" class="form-control" id="pwd" name="mdp_util">
+                        <input type="password" class="form-control" id="pwd" name="mdp_util" required>
                     </div>
                     <div class="d-flex justify-content-center mt-5">
-                        <button type="submit" class="btn btn-primary w-50">se connecter</button>
+                        <button type="submit" name="connect" class="btn btn-primary w-50">se connecter</button>
                     </div>
                 </form>
                 <!-- fin col grid -->
@@ -57,14 +57,14 @@
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">E-mail :</label>
-                        <input type="email" class="form-control" id="email" name="mail_util">
+                        <input type="email" class="form-control" id="email" name="mail_util" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
                     </div>
                     <div class="mb-3">
                         <label for="pwd" class="form-label">Mot de passe :</label>
-                        <input type="password" class="form-control" id="pwd" name="mdp_util">
+                        <input type="password" class="form-control" id="pwd" name="mdp_util" required>
                     </div>
                     <div class="d-flex justify-content-center mt-5">
-                        <button type="submit" class="btn btn-primary w-50">s'inscrire</button>
+                        <button type="submit" name="add" class="btn btn-primary w-50">s'inscrire</button>
                     </div>
                 </form>
                 <!-- fin col grid -->

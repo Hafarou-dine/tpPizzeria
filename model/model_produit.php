@@ -11,7 +11,7 @@
 
 
         /* ---------------------------------------- CONSTRUCTEUR ---------------------------------------- */
-        public function __constructor($id, $nom, $desc, $img, $prix, $type){
+        public function __construct($id, $nom, $desc, $img, $prix, $type){
             $this->nom = $nom;
             $this->desc = $desc;
             $this->img = $img;
@@ -155,7 +155,7 @@
 
         // fonction pour voir tout les produits par categorie
         public function showAllProduit($bdd, $type){
-            try {
+            try{
                 $req = $bdd->prepare('SELECT * FROM produit
                 INNER JOIN pizzeria.type
                 WHERE produit.id_type = pizzeria.type.id_type
