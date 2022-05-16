@@ -77,7 +77,7 @@
                 unset($_COOKIE['PHPSESSID']);
             }
             // on redirige vers la page d'accueil
-            header('Location:/tpPizzeria/');
+            redirection("/tpPizzeria/", "0");
         }
     }
     else{
