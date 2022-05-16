@@ -16,11 +16,11 @@
 
         /* ---------------------------------------- GETTER & SETTER ---------------------------------------- */
         public function getId():int{
-            return $this->id;
+            return $this->id_ing;
         }
 
         public function setId($id):void{
-            $this->id = $id;
+            $this->id_ing = $id;
         }
 
         public function getNom():string{
@@ -28,7 +28,7 @@
         }
 
         public function setNom($nom):void{
-            $this->nom = $nom;
+            $this->nom_ing = $nom;
         }
 
         public function getPrix():int{
@@ -36,7 +36,7 @@
         }
 
         public function setPrix($prix):void{
-            $this->prix = $prix;
+            $this->prix_ing = $prix;
         }
 
 
@@ -45,7 +45,7 @@
         // fonction pour voir tout les ingredients
         public function getAllIngred($bdd){
             try{
-                $req = $bdd->prepare('SELECT * FROM ingredients;');
+                $req = $bdd->prepare('SELECT * FROM ingredient;');
                 $req->execute();
                 return $req->fetchAll(PDO::FETCH_OBJ);
             } 
@@ -57,7 +57,7 @@
         // Fonction qui renvoie un ingredient 
         public function getIngredById($bdd){
             try{
-                $req = $bdd->prepare('SELECT * FROM ingredients 
+                $req = $bdd->prepare('SELECT * FROM ingredient 
                 WHERE id_ing = :id_ing;');
                 $req->execute(array(
                     'id_ing' => $this->getId()
@@ -72,7 +72,7 @@
         // Fonction pour ajouter un ingredient
         public function addIngred($bdd){
             try{
-                $req = $bdd->prepare('INSERT INTO ingredients(nom_ing, prix_ing) 
+                $req = $bdd->prepare('INSERT INTO ingredient(nom_ing, prix_ing) 
                 VALUES(:nom_ing, :prix_ing);');
                 $req->execute(array(
                     'nom_ing' => $this->getNom(),
