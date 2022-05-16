@@ -11,7 +11,7 @@
     <br>
     <div class="container-fluid">
   <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-md-8">
 
     <div class="card shadow mb-5 bg-body rounded">
@@ -75,6 +75,7 @@
 
     </div>
 </div>
+</div> -->
 
     <!-- <div class="container m-5">
         <div class="card shadow p-5 mb-5 bg-body rounded" style="width:75%; height:500px">
@@ -100,7 +101,6 @@
             </div>
         </div>
     </div> -->
-    </div>
 </body>
 </html>
 
