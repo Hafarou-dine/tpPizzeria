@@ -29,7 +29,7 @@
                 <div class="col-6">
                     <div class="mb-3">
                         <label for="nom" class="form-label">Email :</label>
-                        <input type="email" class="form-control" id="nom" name="mail_res">
+                        <input type="email" class="form-control" id="nom" name="mail_res" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" required>
                     </div>
                 </div>
                 <div class="col-6">
@@ -59,11 +59,11 @@
             <div class="row">
                 <div class="col-6">
                     <label for="date" class="form-label">date :</label></br>
-                    <input type="date" name="" id="date">
+                    <input type="date" name="da" id="date">
                 </div>
                 <div class="col-6">
                     <label for="heure" class="form-label">heures :</label></br>
-                    <input type="time" name="" id="heure">
+                    <input type="time" name="he" id="heure">
                 </div>
             </div>
             <div class="mb-3">
