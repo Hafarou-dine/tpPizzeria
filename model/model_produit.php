@@ -95,13 +95,13 @@
         public function updatePorduit($bdd){
             try{
                 $req = $bdd->prepare('UPDATE produit SET nom_prod = :nom_prod, desc_prod = :desc_prod, 
-                img_prod = :img_prod, prix_prod = :prix_prod, id_type = :id_type 
+                 prix_prod = :prix_prod, id_type = :id_type 
                 WHERE id_prod = :id_prod;');
                 $req->execute(array(
                     'id_prod'=> $this->getId(),
                     'nom_prod'=> $this->getNom(),
                     'desc_prod' => $this->getDesc(),
-                    'img_prod' => $this->getImg(),
+                    
                     'prix_prod' => $this->getPrix(),
                     'id_type' => $this->getType()
                 ));

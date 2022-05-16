@@ -3,7 +3,7 @@
     include './view/view_panier.php';
 
     /* ------------------------------ LOGIQUE ------------------------------ */
-    $produit = new Produit();
+    $produit = new Produit(null,null,null,null,null,null);
     $produitById = $produit->getProduitById($bdd,$_GET['id']);
 
    

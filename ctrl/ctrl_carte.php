@@ -4,7 +4,7 @@
 
     /* ------------------------------ LOGIQUE ------------------------------ */
 
-    $produit = new Produit();
+    $produit = new Produit(null,null,null,null,null,null,null);
 
     /////////////////// CARTE PIZZA //////////////////////////////////////////////
     $allProduit = $produit->showAllProduitByType($bdd,1);
@@ -18,9 +18,14 @@
                             <h5 class="card-title">'.$value->nom_prod.'</h5>
                             <p class="card-text">'.$value->desc_prod.'</p>
                             <p class="card-text">'.$value->prix_prod.' €</p>
-                            <a href="/tpPizzeria/panier?id='.$value->id_prod.'" class="btn btn-primary">commander</a>
-                        </div>
-                </div>';
+                            <a href="/tpPizzeria/panier?id='.$value->id_prod.'" class="btn btn-primary">commander</a>';
+                            if ($_SESSION['droit']== 1) {
+                                echo '<a href="updateProduit?id='.$value->id_prod.'"><img src="./asset/image/crayon.png" alt=""></a>';
+                                echo '<a href="carte?supp='.$value->id_prod.'"><img src="./asset/image/poubelle.png" alt=""></a>';
+                            }
+                        echo '</div>';
+                echo '</div>';
+
     }
     echo '</div>';
 
@@ -38,9 +43,13 @@
                             <h5 class="card-title">'.$value->nom_prod.'</h5>
                             <p class="card-text">'.$value->desc_prod.'</p>
                             <p class="card-text">'.$value->prix_prod.' €</p>
-                            <a href="/tpPizzeria/panier?id='.$value->id_prod.'" class="btn btn-primary">commander</a>
-                        </div>
-                </div>';
+                            <a href="/tpPizzeria/panier?id='.$value->id_prod.'" class="btn btn-primary">commander</a>';
+                            if ($_SESSION['droit']== 1) {
+                                echo '<a href="updateProduit?id='.$value->id_prod.'"><img src="./asset/image/crayon.png" alt=""></a>';
+                                echo '<a href="carte?supp='.$value->id_prod.'"><img src="./asset/image/poubelle.png" alt=""></a>';
+                            }
+                        echo '</div>';
+                echo '</div>';
     }
     echo '</div>';
     /////////////////// FIN CARTE Entrees //////////////////////////////////////////////
@@ -57,9 +66,13 @@
                             <h5 class="card-title">'.$value->nom_prod.'</h5>
                             <p class="card-text">'.$value->desc_prod.'</p>
                             <p class="card-text">'.$value->prix_prod.' €</p>
-                            <a href="/tpPizzeria/panier?id='.$value->id_prod.'" class="btn btn-primary">commander</a>
-                        </div>
-                </div>';
+                            <a href="/tpPizzeria/panier?id='.$value->id_prod.'" class="btn btn-primary">commander</a>';
+                            if ($_SESSION['droit']== 1) {
+                                echo '<a href="updateProduit?id='.$value->id_prod.'"><img src="./asset/image/crayon.png" alt=""></a>';
+                                echo '<a href="carte?supp='.$value->id_prod.'"><img src="./asset/image/poubelle.png" alt=""></a>';
+                            }
+                        echo '</div>';
+                echo '</div>';
     }
     echo '</div>';
     /////////////////// FIN CARTE SAUCES //////////////////////////////////////////////
@@ -76,9 +89,13 @@
                             <h5 class="card-title">'.$value->nom_prod.'</h5>
                             <p class="card-text">'.$value->desc_prod.'</p>
                             <p class="card-text">'.$value->prix_prod.' €</p>
-                            <a href="/tpPizzeria/panier?id='.$value->id_prod.'" class="btn btn-primary">commander</a>
-                        </div>
-                </div>';
+                            <a href="/tpPizzeria/panier?id='.$value->id_prod.'" class="btn btn-primary">commander</a>';
+                            if ($_SESSION['droit']== 1) {
+                                echo '<a href="updateProduit?id='.$value->id_prod.'"><img src="./asset/image/crayon.png" alt=""></a>';
+                                echo '<a href="carte?supp='.$value->id_prod.'"><img src="./asset/image/poubelle.png" alt=""></a>';
+                            }
+                        echo '</div>';
+                echo '</div>';
     }
     echo '</div>';
     /////////////////// FIN CARTE DESSERT //////////////////////////////////////////////
@@ -95,9 +112,13 @@
                             <h5 class="card-title">'.$value->nom_prod.'</h5>
                             <p class="card-text">'.$value->desc_prod.'</p>
                             <p class="card-text">'.$value->prix_prod.' €</p>
-                            <a href="/tpPizzeria/panier?id='.$value->id_prod.'" class="btn btn-primary">commander</a>
-                        </div>
-                </div>';
+                            <a href="/tpPizzeria/panier?id='.$value->id_prod.'" class="btn btn-primary">commander</a>';
+                            if ($_SESSION['droit']== 1) {
+                                echo '<a href="updateProduit?id='.$value->id_prod.'"><img src="./asset/image/crayon.png" alt=""></a>';
+                                echo '<a href="carte?supp='.$value->id_prod.'"><img src="./asset/image/poubelle.png" alt=""></a>';
+                            }
+                        echo '</div>';
+                echo '</div>';
     }
     echo '</div>';
     /////////////////// FIN CARTE BOISSONS //////////////////////////////////////////////
@@ -114,16 +135,20 @@
                             <h5 class="card-title">'.$value->nom_prod.'</h5>
                             <p class="card-text">'.$value->desc_prod.'</p>
                             <p class="card-text">'.$value->prix_prod.' €</p>
-                            <a href="/tpPizzeria/panier?id='.$value->id_prod.'" class="btn btn-primary">commander</a>
-                        </div>
-                </div>';
+                            <a href="/tpPizzeria/panier?id='.$value->id_prod.'" class="btn btn-primary">commander</a>';
+                            if ($_SESSION['droit']== 1) {
+                                echo '<a href="updateProduit?id='.$value->id_prod.'"><img src="./asset/image/crayon.png" alt=""></a>';
+                                echo '<a href="carte?supp='.$value->id_prod.'"><img src="./asset/image/poubelle.png" alt=""></a>';
+                            }
+                        echo '</div>';
+                echo '</div>';
     }
     echo '</div>';
     ///////////////// FIN CARTE MENU //////////////////////////////////////////////
 
     /////////////////// PIZZA CUSTOM //////////////////////////////////////////////
 
-    $ingredient = new Ingredient();
+    $ingredient = new Ingredient(null,null,null);
     $allIngredient = $ingredient->getAllIngred($bdd);
     $tabloIngredient=[];
     
@@ -184,11 +209,13 @@ if (isset($_POST['ajout']) && count($tabloIngredient)<5) {
 }
 
 
-    
-
     ///////////////// FIN PIZZA CUSTOM //////////////////////////////////////////////
 
-
+////////////////////////////////////// suppression article
+if (isset($_GET['supp'])) {
+    $produit->setId($_GET['supp']);
+    $produit->deletePorduit($bdd);
+}
 
 
 ?>
