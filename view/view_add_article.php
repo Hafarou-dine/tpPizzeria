@@ -15,8 +15,8 @@
                     <p>Titre de l'article :<input type="text" name="titre_art" class="form-control"></p>
                     <p>Contenu de l'article :<textarea name="contenu_art" class="form-control" cols="50" rows="10"></textarea></p>
                     <p><input type="file" name="img_art_1" class="form-control"></p>
-                    <p><input type="file" name="img_art_1" class="form-control"></p>
-                    <p><input type="file" name="img_art_1" class="form-control"></p>
+                    <p><input type="file" name="img_art_2" class="form-control"></p>
+                    <p><input type="file" name="img_art_3" class="form-control"></p>
                     <p class="d-flex justify-content-around mt-5">
                         <input type="submit" value="Ajouter" name="add" class="btn btn-primary w-25">
                     </p>

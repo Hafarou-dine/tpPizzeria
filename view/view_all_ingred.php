@@ -8,7 +8,7 @@
 </head>
 <body>
     <h2>Liste des Ingrédients</h2>
-    
+    <form action="" method="post">
 </body>
 </html>
 
