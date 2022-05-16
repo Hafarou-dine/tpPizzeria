@@ -8,7 +8,7 @@
 
 
         /* ---------------------------------------- CONSTRUCTEUR ---------------------------------------- */
-        public function __constructor($id, $nom, $prix){
+        public function __construct($id, $nom, $prix){
             $this->nom = $nom;
             $this->prix = $prix;
         }
