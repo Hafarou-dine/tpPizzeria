@@ -11,7 +11,7 @@
 echo'
 <form action="" method="post">
     <div class="card m-5" style="width: 18rem;">
-        <img src='.$produitById->img_prod.' class="card-img-top" alt="produit">
+        <img src=asset\image\\'.$produitById->img_prod.' class="card-img-top" alt="produit">
         <div class="card-body">
         <h5 class="card-title">'.$produitById->nom_prod.'</h5>
         <p class="card-text">'.$produitById->desc_prod.'</p>

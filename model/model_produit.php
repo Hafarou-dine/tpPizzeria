@@ -77,7 +77,7 @@
         public function addProduit($bdd){
             try{
                 $req = $bdd->prepare('INSERT INTO produit(nom_prod, desc_prod, img_prod, prix_prod, id_type)
-                VALUES (:nom_prod, :desc_prod, :img_prod, :prix_prod, :id_type);');
+                VALUES (:nom_prod, :desc_prod, :img_prod, :prix_prod, :id_type)');
                 $req->execute(array(
                     'nom_prod'=> $this->getNom(),
                     'desc_prod' => $this->getDesc(),

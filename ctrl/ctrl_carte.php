@@ -13,7 +13,7 @@
     echo '<div class="d-flex flex-row">';
     foreach($allProduit as $value){
         echo '<div class="card shadow m-5 bg-body rounded" style="width: 18rem;">
-                    <img src='.$value->img_prod.' class="card-img-top" alt="produit">
+                    <img src=asset\image\\'.$value->img_prod.' class="card-img-top" alt="produit">
                         <div class="card-body">
                             <h5 class="card-title">'.$value->nom_prod.'</h5>
                             <p class="card-text">'.$value->desc_prod.'</p>
@@ -33,7 +33,7 @@
     echo '<div class="d-flex flex-row">';
     foreach($allProduit as $value){
         echo '<div class="card shadow m-5 bg-body rounded" style="width: 18rem;">
-                    <img src='.$value->img_prod.' class="card-img-top" alt="produit">
+                    <img src=asset\image\\'.$value->img_prod.' class="card-img-top" alt="produit">
                         <div class="card-body">
                             <h5 class="card-title">'.$value->nom_prod.'</h5>
                             <p class="card-text">'.$value->desc_prod.'</p>
@@ -52,7 +52,7 @@
     echo '<div class="d-flex flex-row">';
     foreach($allProduit as $value){
         echo '<div class="card shadow m-5 bg-body rounded" style="width: 18rem;">
-                    <img src='.$value->img_prod.' class="card-img-top" alt="produit">
+                    <img src=asset\image\\'.$value->img_prod.' class="card-img-top" alt="produit">
                         <div class="card-body">
                             <h5 class="card-title">'.$value->nom_prod.'</h5>
                             <p class="card-text">'.$value->desc_prod.'</p>
@@ -71,7 +71,7 @@
     echo '<div class="d-flex flex-row">';
     foreach($allProduit as $value){
         echo '<div class="card shadow m-5 bg-body rounded" style="width: 18rem;">
-                    <img src='.$value->img_prod.' class="card-img-top" alt="produit">
+                    <img src=asset\image\\'.$value->img_prod.' class="card-img-top" alt="produit">
                         <div class="card-body">
                             <h5 class="card-title">'.$value->nom_prod.'</h5>
                             <p class="card-text">'.$value->desc_prod.'</p>
@@ -90,7 +90,7 @@
     echo '<div class="d-flex flex-row">';
     foreach($allProduit as $value){
         echo '<div class="card shadow m-5 bg-body rounded" style="width: 18rem;">
-                    <img src='.$value->img_prod.' class="card-img-top" alt="produit">
+                    <img src=asset\image\\'.$value->img_prod.' class="card-img-top" alt="produit">
                         <div class="card-body">
                             <h5 class="card-title">'.$value->nom_prod.'</h5>
                             <p class="card-text">'.$value->desc_prod.'</p>
@@ -109,7 +109,7 @@
     echo '<div class="d-flex flex-row">';
     foreach($allProduit as $value){
         echo '<div class="card shadow m-5 bg-body rounded" style="width: 18rem;">
-                    <img src='.$value->img_prod.' class="card-img-top" alt="produit">
+                    <img src=asset\image\\'.$value->img_prod.' class="card-img-top" alt="produit">
                         <div class="card-body">
                             <h5 class="card-title">'.$value->nom_prod.'</h5>
                             <p class="card-text">'.$value->desc_prod.'</p>
@@ -120,6 +120,73 @@
     }
     echo '</div>';
     ///////////////// FIN CARTE MENU //////////////////////////////////////////////
+
+    /////////////////// PIZZA CUSTOM //////////////////////////////////////////////
+
+    $ingredient = new Ingredient();
+    $allIngredient = $ingredient->getAllIngred($bdd);
+    $tabloIngredient=[];
+    
+
+    echo '<div class="card shadow m-5 p-2 bg-body rounded"><h2 id="pizzaCuston">PIZZA CUSTOM</h2></div>';
+
+        echo '<div class="card shadow m-5 p-2 bg-body rounded d-grid gap-2 col-6 mx-auto">
+        <form action="" method="post">
+
+<label for="pizza-select">Choissiez votre taille:</label>
+  <select name="pizza" id="pizza-select">
+      <option value="">--taille--</option>
+      <option value="20">petite</option>
+      <option value="25">moyenne</option>
+      <option value="30">grande</option>
+  </select>
+
+<label for="pizza-select">Choissiez votre base:</label>
+  <select name="base" id="pizza-select">
+      <option value="">--base--</option>
+      <option value="creme">créme</option>
+      <option value="tomate">tomate</option>
+  </select>
+
+<label for="pizza-select">Choissiez vos ingredients:</label>
+<select name="ingredients" id="pizza-select">
+<option value="">--ingredients--</option>';
+  foreach($allIngredient as $value){
+        echo '
+        <option value='.$value->nom_ing.'>'.$value->nom_ing.'</option>';
+        
+}
+echo '</select>';
+  
+   
+      echo'<div>
+    <p>Liste des ingredients choisis:</p>
+  </div>';
+
+  // parcour du tableau ingredients
+
+  foreach($tabloIngredient as $value){
+      echo '<li>'.$value.'</li>';
+  }
+    
+  
+
+echo '<input type="submit" value="ajouter un ingredient" class="btn btn-primary" name="ajout">
+
+<input type="submit" value="commander" class="btn btn-primary" name="commande">
+</form>
+</div>';
+
+if (isset($_POST['ajout']) && count($tabloIngredient)<5) {
+    array_push($tabloIngredient,$_POST['ingredients']);
+    var_dump($_POST['base']);
+    var_dump($_POST['pizza']);
+}
+
+
+    
+
+    ///////////////// FIN PIZZA CUSTOM //////////////////////////////////////////////
 
 
 
