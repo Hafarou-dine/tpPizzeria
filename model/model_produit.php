@@ -80,10 +80,10 @@
                 VALUES (:nom_prod, :desc_prod, :img_prod, :prix_prod, :id_type);');
                 $req->execute(array(
                     'nom_prod'=> $this->getNom(),
-                    'desc_prod' => $this->getDescProd(),
-                    'img_prod' => $this->getImgProd(),
-                    'prix_prod' => $this->getPrixProd(),
-                    'id_type' => $this->getIdType()
+                    'desc_prod' => $this->getDesc(),
+                    'img_prod' => $this->getImg(),
+                    'prix_prod' => $this->getPrix(),
+                    'id_type' => $this->getType()
                 ));
             }
             catch(Exception $e){
