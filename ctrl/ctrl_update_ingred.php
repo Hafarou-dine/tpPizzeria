@@ -43,7 +43,7 @@
     }
 }
     else{
-        header('Location: /newEvalMvc/showArticle?noId');
+        header('Location: /tpPizzeria/allIngred?noId');
     }
      //Affichage en JS des Messages 
      echo "<script>zoneMsg.innerHTML = '$msg';</script>";
