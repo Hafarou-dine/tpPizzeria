@@ -21,6 +21,8 @@
                 </p>
             </div>
             </form>
+            <p id="msg"></p>
+            <script src="./asset/js/script.js"></script>
         </div>
     </div>
 </body>

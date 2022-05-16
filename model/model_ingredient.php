@@ -45,19 +45,19 @@
         // fonction pour voir tout les ingredients
         public function getAllIngred($bdd){
             try{
-                $req = $bdd->prepare('SELECT * FROM ingredients;');
+                $req = $bdd->prepare('SELECT * FROM ingredient;');
                 $req->execute();
                 return $req->fetchAll(PDO::FETCH_OBJ);
             } 
             catch(Exception $e){
-                die('Erreur :' .$e->getMessage());
+                die('Erreur : '.$e->getMessage());
             }
         }
 
         // Fonction qui renvoie un ingredient 
         public function getIngredById($bdd){
             try{
-                $req = $bdd->prepare('SELECT * FROM ingredients 
+                $req = $bdd->prepare('SELECT * FROM ingredient 
                 WHERE id_ing = :id_ing;');
                 $req->execute(array(
                     'id_ing' => $this->getId()
@@ -65,14 +65,14 @@
                 return $req->fetch(PDO::FETCH_OBJ);
             } 
             catch(Exception $e){
-                die('Erreur : ' .$e->getMessage());
+                die('Erreur : '.$e->getMessage());
             }
         }
 
         // Fonction pour ajouter un ingredient
         public function addIngred($bdd){
             try{
-                $req = $bdd->prepare('INSERT INTO ingredients(nom_ing, prix_ing) 
+                $req = $bdd->prepare('INSERT INTO ingredient(nom_ing, prix_ing) 
                 VALUES(:nom_ing, :prix_ing);');
                 $req->execute(array(
                     'nom_ing' => $this->getNom(),
@@ -80,7 +80,7 @@
                 ));
             }
             catch(Exception $e) {
-                die('Erreur : ' .$e->getMessage());
+                die('Erreur : '.$e->getMessage());
             }
         }
 
@@ -96,7 +96,7 @@
                 ));
             } 
             catch(Exception $e) {
-                die('Erreur : ' .$e->getMessage());
+                die('Erreur : '.$e->getMessage());
             }
         }
 
@@ -110,7 +110,7 @@
                 ));
             }
             catch(Exception $e){
-                die('Erreur : ' .$e->getMessage());
+                die('Erreur : '.$e->getMessage());
             }
         }
     }
