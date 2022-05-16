@@ -8,7 +8,7 @@
     <title>Jeff Pizza</title>
 </head>
 <body>
-    <div class="container-fluid w-75">
+    <!-- <div class="container-fluid w-75">
         <div class="m-5">
             <h1 class="m-5 text-center">Modifier un produit</h1>
             <form action="" method="post">
@@ -27,7 +27,9 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
+
+    <script src="./asset/js/script.js"></script>
 </body>
 </html>
 

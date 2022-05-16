@@ -66,7 +66,7 @@
         public function addCompo($bdd){
             try{
                 $req = $bdd->prepare('INSERT INTO composer(id_prod, id_ing, qtx) 
-                VALUES(:id_prod, :id_ing, :qtx);');
+                VALUES(:id_prod, :id_ing, :qtx)');
                 $req->execute(array(
                     "id_prod" => $this->getProd(),
                     "id_ing" => $this->getIng(),

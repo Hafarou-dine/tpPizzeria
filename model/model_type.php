@@ -83,19 +83,19 @@
 
         
         // /*---SHOW ALL TYPE---*/
-        // public function showAllType($bdd):array{
-        //     try{
-        //         $req = $bdd->prepare('SELECT * FROM type');
-        //         $req->execute();
-        //         $data = $req->fetchAll(PDO::FETCH_OBJ);
-        //         return $data;
-        //     }
-        //     catch(Exception $e)
-        //     {
-        //         //affichage d'une exception en cas d’erreur
-        //         die('Erreur : '.$e->getMessage());
-        //     }
-        // }
+        public function showAllType($bdd){
+            try{
+                $req = $bdd->prepare('SELECT * FROM type');
+                $req->execute();
+                $data = $req->fetchAll(PDO::FETCH_OBJ);
+                return $data;
+            }
+            catch(Exception $e)
+            {
+                //affichage d'une exception en cas d’erreur
+                die('Erreur : '.$e->getMessage());
+            }
+        }
 
         // /*---SHOW TYPE BY ID---*/
         // public function showTypeById($bdd,$id):array{

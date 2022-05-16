@@ -186,7 +186,7 @@
         public function deleteArticle($bdd){
             try{
                 $req = $bdd->prepare('DELETE FROM article 
-                WHERE id_art = :id_art;');
+                WHERE id_art = :id_art');
                 $req->execute(array(
                     "id_art" => $this->getId(),
                 ));
@@ -200,7 +200,7 @@
         public function getArticleById($bdd){
             try{
                 $req = $bdd->prepare('SELECT * FROM article 
-                WHERE id_art = :id_art;');
+                WHERE id_art = :id_art');
                 $req->execute(array(
                     "id_art" => $this->getId(),
                 ));
@@ -214,7 +214,7 @@
         // Fonction qui renvoie tous les articles
         public function getAllArticle($bdd){
             try{
-                $req = $bdd->prepare('SELECT * FROM article;');
+                $req = $bdd->prepare('SELECT * FROM article');
                 $req->execute();
                 return $req->fetchAll(PDO::FETCH_OBJ);
             }

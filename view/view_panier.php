@@ -8,6 +8,13 @@
 </head>
 <body>
     <h1 class="ms-5">Votre Panier</h1>
+
+
+
+
+
+
 </body>
 </html>
+
 
