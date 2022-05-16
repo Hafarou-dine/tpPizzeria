@@ -156,7 +156,6 @@
                 die('Erreur :' .$e->getMessage());
             }
         }
-
     }
 ?>
 
