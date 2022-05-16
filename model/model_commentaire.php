@@ -2,21 +2,21 @@
     class Commentaire{
         /* ---------------------------------------- ATTRIBUTS ---------------------------------------- */
         protected $id;
-        protected $pseudo;
-        protected $com;
-        protected $date;
-        protected $util;
-        protected $art;
+        protected $pseudo_com;
+        protected $texte_com;
+        protected $date_com;
+        protected $id_util;
+        protected $id_art;
         
 
 
         /* ---------------------------------------- CONSTRUCTEUR ---------------------------------------- */
         public function __construct($pseudo, $com, $date, $util, $art){
-            $this->pseudo = $pseudo;
-            $this->com = $com;
-            $this->date = $date;
-            $this->util = $util;
-            $this->art = $art;
+            $this->pseudo_com = $pseudo;
+            $this->texte_com = $texte;
+            $this->date_com = $date;
+            $this->id_util = $util;
+            $this->id_art = $art;
         }
 
 
@@ -41,77 +41,77 @@
          * Get the value of pseudo
          */ 
         public function getPseudo():string{
-            return $this->pseudo;
+            return $this->pseudo_com;
         }
 
         /**
          * Set the value of pseudo
          */ 
         public function setPseudo($pseudo):void{
-            $this->pseudo = $pseudo;
+            $this->pseudo_com = $pseudo;
         }
 
         /**
          * Get the value of com
          */ 
         public function getCom():string{
-            return $this->com;
+            return $this->texte_com;
         }
 
         /**
          * Set the value of com
          */ 
-        public function setCom($com):void{
-            $this->com = $com;
+        public function setCom($texte):void{
+            $this->texte_com = $texte;
         }
 
         /**
          * Get the value of date
          */ 
         public function getDate():string{
-            return $this->date;
+            return $this->date_com;
         }
 
         /**
          * Set the value of date
          */ 
         public function setDate($date):void{
-            $this->date = $date;
+            $this->date_com = $date;
         }
 
         /**
          * Get the value of util
          */ 
         public function getUtil(){
-            return $this->util;
+            return $this->id_util;
         }
 
         /**
          * Set the value of util
          */ 
         public function setUtil($util):void{
-            $this->util = $util;
+            $this->id_util = $util;
         }
 
         /**
          * Get the value of art
          */ 
         public function getArt():int{
-            return $this->art;
+            return $this->id_art;
         }
 
         /**
          * Set the value of art
          */ 
         public function setArt($art):void{
-            $this->art = $art;
+            $this->id_art = $art;
         }
 
 
 
         /* ---------------------------------------- METHODES ---------------------------------------- */
         // Fonction qui ajoute un commentaire
-        public function addCom($bdd){
+        public function addCom($bdd,$id_util,$id_art){
             try{
                 $req = $bdd->prepare('INSERT INTO commentaire(pseudo_com, text_com, date_com, id_util, id_art)
                 VALUES(:pseudo_com, :text_com, :date_com, :id_util, :id_art);');

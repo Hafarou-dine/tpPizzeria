@@ -18,7 +18,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
     
 
-      <div class="col">
+      <!-- <div class="col">
         <div class="card shadow mb-5 bg-body rounded" style="width:100%; height:500px">
           <img src="./asset/image/pizza.jpeg"
             class="card-img-top" alt="..." style="width:100%; height:250px">
@@ -57,12 +57,12 @@
           </div>
           <div class="card-footer">
             <small class="d-flex justify-content-end">
-              <a href=""><img src="./asset/image/crayon.png"></a>
+              <a href="/tpPizzeria/updateArticle"><img src="./asset/image/crayon.png"></a>
               <a href=""><img src="./asset/image/poubelle.png"></a>
             </small>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>
