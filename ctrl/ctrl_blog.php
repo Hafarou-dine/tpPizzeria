@@ -13,7 +13,7 @@
             foreach($tab as $value){
                 echo '
                 <div class="col">
-                <div class="card shadow mb-5 bg-body rounded" style="width:100%; height:500px">
+                <div class="card shadow mb-5 bg-body rounded" style="width:25%; height:500px">
                     <img src="'.$value->img_art_1.'" 
                     class="card-img-top" alt="..." style="width:100%; height:250px">
                     <div class="card-body">
@@ -51,7 +51,7 @@
     else{
         foreach($tab as $value){
             echo       
-            '<div class="col">
+            '<div class="col-4">
                 <div class="card shadow mb-5 bg-body rounded" style="width:100%; height:500px">
                     <img src="'.$value->img_art_1.'"
                     class="card-img-top" alt="..." style="width:100%; height:250px">
