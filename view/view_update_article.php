@@ -7,16 +7,20 @@
     <title>Jeff Pizza</title>
 </head>
 <body>
-    <div class="container-fluid w-50">
+    <div class="container-fluid w-75">
         <div class="m-5">
-            <h1 class="m-3 text-center">Modifier un article</h1>
-            <form action="" method="post">
-                <p>Titre de l'article :<input type="text" name="titre_art" class="form-control" style="width:400px" ></p>
-                <p>contenu de l'article :<textarea name="contenu_art" class="form-control" cols="50" rows="10" ></textarea></p>
-                <p><input type="file" name="img_art_1" class="form-control"></p>
-                <p><input type="file" name="img_art_1" class="form-control"></p>
-                <p><input type="file" name="img_art_1" class="form-control"></p>
-                <input type="submit" value="Enregistrer" name="update" class="m-1">
+            <h1 class="m-5 text-center">Modifier un article</h1>
+            <form action="" method="post" enctype="multipart/form-data">
+                <div class="container shadow p-5 mb-5 bg-body rounded">
+                    <p>Titre de l'article :<input type="text" name="titre_art" class="form-control"></p>
+                    <p>Contenu de l'article :<textarea name="contenu_art" class="form-control" cols="50" rows="10"></textarea></p>
+                    <p><input type="file" name="img_art_1" class="form-control"></p>
+                    <p><input type="file" name="img_art_1" class="form-control"></p>
+                    <p><input type="file" name="img_art_1" class="form-control"></p>
+                    <p class="d-flex justify-content-around mt-5">
+                        <input type="submit" value="Enregistrer" name="update" class="btn btn-primary w-25">
+                    </p>
+                </div>
             </form>
         </div>
     </div>
