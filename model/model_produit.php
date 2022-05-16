@@ -77,7 +77,7 @@
         public function addProduit($bdd){
             try{
                 $req = $bdd->prepare('INSERT INTO produit(nom_prod, desc_prod, img_prod, prix_prod, id_type)
-                VALUES (:nom_prod, :desc_prod, :img_prod, :prix_prod, :id_type);');
+                VALUES (:nom_prod, :desc_prod, :img_prod, :prix_prod, :id_type)');
                 $req->execute(array(
                     'nom_prod'=> $this->getNom(),
                     'desc_prod' => $this->getDesc(),
@@ -95,13 +95,13 @@
         public function updatePorduit($bdd){
             try{
                 $req = $bdd->prepare('UPDATE produit SET nom_prod = :nom_prod, desc_prod = :desc_prod, 
-                img_prod = :img_prod, prix_prod = :prix_prod, id_type = :id_type 
+                 prix_prod = :prix_prod, id_type = :id_type 
                 WHERE id_prod = :id_prod;');
                 $req->execute(array(
                     'id_prod'=> $this->getId(),
                     'nom_prod'=> $this->getNom(),
                     'desc_prod' => $this->getDesc(),
-                    'img_prod' => $this->getImg(),
+                    
                     'prix_prod' => $this->getPrix(),
                     'id_type' => $this->getType()
                 ));
@@ -126,17 +126,30 @@
         }
 
         // Fonction qui renvoie un produit par son id
-        public function getProduitById($bdd){
+        public function getProduitById($bdd,$id){
             try{
                 $req = $bdd->prepare('SELECT * FROM produit 
                 WHERE id_prod = :id_prod');
                 $req->execute(array(
-                    'id_prod'=> $this->getId()
+                    'id_prod'=> $id
                 ));
                 return $req->fetch(PDO::FETCH_OBJ);
             }
             catch(Exception $e){
                 die('Erreur : '.$e->getMessage());
+            }
+        }
+        // fonction pour récupérer tout les produits 
+        public function showAllProduitByType($bdd,$idType){
+            try {
+                $req = $bdd->prepare('SELECT * FROM produit WHERE id_type=:id_type');
+                $req->execute(array(
+                    'id_type' => $idType
+                ));
+                $data = $req->fetchAll(PDO::FETCH_OBJ);
+                return $data;
+            } catch (Exception $e) {
+                die('Erreur :' .$e->getMessage());
             }
         }
 

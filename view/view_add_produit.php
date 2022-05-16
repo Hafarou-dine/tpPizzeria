@@ -21,6 +21,7 @@
                             <option value="default">----- TYPE -----</option>
                         </select>
                     </p>
+                    <input type="file" name="img_prod">
                     <p class="d-flex justify-content-around mt-5">
                         <input id="" type="submit" value="Ajouter" name="add" class="btn btn-primary w-25">
                     </p>
@@ -28,6 +29,7 @@
             </form>
         </div>
     </div>
+    <script src="./asset/js/script.js"></script>
 </body>
 </html>
 

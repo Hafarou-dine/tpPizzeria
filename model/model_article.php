@@ -147,7 +147,7 @@
         public function addArticle($bdd){
             try{
                 $req = $bdd->prepare('INSERT INTO article(titre_art, contenu_art, img_1_art, img_2_art, img_3_art, date_art)
-                VALUES(:titre_art, :contenu_art, :img_1_art, :img_2_art, :img_3_art, :date_art);');
+                VALUES(:titre_art, :contenu_art, :img_1_art, :img_2_art, :img_3_art, :date_art)');
                 $req->execute(array(
                     "titre_art" => $this->getTitre(),
                     "contenu-art" => $this->getContenu(),
@@ -168,7 +168,7 @@
                 $req = $bdd->prepare('UPDATE article 
                 SET titre_art = :titre_art, contenu_art = :contenu_art, img_1_art = :img_1_art, 
                 img_2_art = :img_2_art, img_3_art = :img_3_art, date_mod_art = :date_mod_art
-                WHERE id_art = :id_art;');
+                WHERE id_art = :id_art');
                 $req->execute(array(
                     "id_art" => $this->getId(),
                     "titre_art" => $this->getTitre(),
@@ -188,7 +188,7 @@
         public function deleteArticle($bdd){
             try{
                 $req = $bdd->prepare('DELETE FROM article 
-                WHERE id_art = :id_art;');
+                WHERE id_art = :id_art');
                 $req->execute(array(
                     "id_art" => $this->getId(),
                 ));
@@ -202,7 +202,7 @@
         public function getArticleById($bdd){
             try{
                 $req = $bdd->prepare('SELECT * FROM article 
-                WHERE id_art = :id_art;');
+                WHERE id_art = :id_art');
                 $req->execute(array(
                     "id_art" => $this->getId(),
                 ));
@@ -216,7 +216,7 @@
         // Fonction qui renvoie tous les articles
         public function getAllArticle($bdd){
             try{
-                $req = $bdd->prepare('SELECT * FROM article;');
+                $req = $bdd->prepare('SELECT * FROM article');
                 $req->execute();
                 return $req->fetchAll(PDO::FETCH_OBJ);
             }

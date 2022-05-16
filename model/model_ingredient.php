@@ -39,13 +39,14 @@
             $this->prix = $prix;
         }
 
+        
 
 
         /* ---------------------------------------- METHODES ---------------------------------------- */
         // fonction pour voir tout les ingredients
         public function getAllIngred($bdd){
             try{
-                $req = $bdd->prepare('SELECT * FROM ingredients;');
+                $req = $bdd->prepare('SELECT * FROM ingredient');
                 $req->execute();
                 return $req->fetchAll(PDO::FETCH_OBJ);
             } 
