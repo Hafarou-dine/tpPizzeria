@@ -32,6 +32,14 @@
         public function setId($id):void{
             $this->id = $id;
         }
+        // id util
+        public function getIdUtil():int{
+            return $this->util;
+        }
+
+        public function setIdUtil($util):void{
+            $this->util = $util;
+        }
 
         public function getNom():string{
             return $this->nom;
@@ -57,7 +65,7 @@
             $this->tel = $tel;
         }
 
-        public function getDate():string{
+        public function getDate(){
             return $this->date;
         }
 
@@ -65,7 +73,7 @@
             $this->date = $date;
         }
 
-        public function getNbrCouv():string{
+        public function getNbrCouv(){
             return $this->nbr_couv;
         }
         
@@ -79,14 +87,15 @@
         // Fonction qui ajoute une réservation
         public function addRes($bdd):void{
             try{
-                $req = $bdd->prepare('INSERT INTO reservation(nom_res, mail_res, tel_res, date_res, nbr_couv_res)
-                VALUES(:nom_res, :mail_res, :tel_res, :date_res, :nbr_couv_res)');
+                $req = $bdd->prepare('INSERT INTO reservation(nom_res, mail_res, tel_res, date_res, nbr_couv_res,id_util)
+                VALUES(:nom_res, :mail_res, :tel_res, :date_res, :nbr_couv_res,:id_util)');
                 $req->execute(array(
                     'nom_res' => $this->getNom(),
                     'mail_res' => $this->getMail(),
                     'tel_res' => $this->getTel(),
                     'date_res' => $this->getDate(),
-                    'nbr_couv_res' => $this->getNbrCouv()
+                    'nbr_couv_res' => $this->getNbrCouv(),
+                    'id_util' => $this->getIdUtil(),
                 ));
             }
             catch(Exception $e){

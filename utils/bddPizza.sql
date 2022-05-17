@@ -64,7 +64,7 @@ CREATE TABLE reservation(
    mail_res VARCHAR(255),
    tel_res VARCHAR(20),
    date_res DATETIME,
-   nbr_couv_res FLOAT,
+   nbr_couv_res INT,
    id_util INT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

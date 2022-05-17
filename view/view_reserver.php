@@ -59,17 +59,17 @@
             <div class="row">
                 <div class="col-6">
                     <label for="date" class="form-label">date :</label></br>
-                    <input type="date" name="" id="date">
+                    <input type="date" name="date_res" id="date">
                 </div>
-                <div class="col-6">
+                <!-- <div class="col-6">
                     <label for="heure" class="form-label">heures :</label></br>
                     <input type="time" name="" id="heure">
-                </div>
+                </div> -->
             </div>
-            <div class="mb-3">
+            <!-- <div class="mb-3">
                 <label for="sujet" class="form-label">Detail (optionel) :</label>
                 <textarea name="" id="" cols="30" rows="5" class="form-control"></textarea>
-            </div>
+            </div> -->
             <div class="d-flex justify-content-center mt-4">
                 <button type="submit" class="btn btn-primary w-25">réserver</button>
             </div>
