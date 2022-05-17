@@ -13,7 +13,7 @@
 
 $msg = "";
 
-    $produit = new Produit();
+    $produit = new Produit(null,null,null,null,null,null);
 
     if (isset($_POST['nom_prod']) && !empty($_POST['nom_prod'])
     &&isset($_POST['desc_prod']) && !empty($_POST['desc_prod'])
