@@ -13,7 +13,7 @@
         /* ---------------------------------------- CONSTRUCTEUR ---------------------------------------- */
         public function __construct($pseudo, $com, $date, $util, $art){
             $this->pseudo_com = $pseudo;
-            $this->texte_com = $texte;
+            $this->texte_com = $com;
             $this->date_com = $date;
             $this->id_util = $util;
             $this->id_art = $art;
@@ -61,8 +61,8 @@
         /**
          * Set the value of com
          */ 
-        public function setCom($texte):void{
-            $this->texte_com = $texte;
+        public function setCom($com):void{
+            $this->texte_com = $com;
         }
 
         /**
@@ -111,15 +111,15 @@
 
         /* ---------------------------------------- METHODES ---------------------------------------- */
         // Fonction qui ajoute un commentaire
-        public function addCom($bdd,$id_util,$id_art){
+        public function addCom($bdd){
             try{
-                $req = $bdd->prepare('INSERT INTO commentaire(pseudo_com, text_com, date_com, id_util, id_art)
-                VALUES(:pseudo_com, :text_com, :date_com, :id_util, :id_art);');
+                $req = $bdd->prepare('INSERT INTO commentaire(pseudo_com, texte_com, date_com, id_util, id_art)
+                VALUES(:pseudo_com, :texte_com, :date_com, :id_util, :id_art);');
                 $req->execute(array(
                     "pseudo_com" => $this->getPseudo(),
-                    "text_com" => $this->getCom(),
+                    "texte_com" => $this->getCom(),
                     "date_com" => $this->getDate(),
-                    "id_util" => $this->getUtil(),
+                    "id_util" =>$this->getUtil(),
                     "id_art" => $this->getArt()
                 ));
             }
@@ -132,10 +132,12 @@
         public function getAllComByArticle($bdd){
             try{
                 $req = $bdd->prepare('SELECT * FROM commentaire
-                WHERE id_art = :id_art;');
+                WHERE id_art = :id_art');
                 $req->execute(array(
                     "id_art" => $this->getArt()
                 ));
+                $data = $req->fetchAll(PDO::FETCH_OBJ);
+                return $data;
             }
             catch(Exception $e){
                 die('Erreur : '.$e->getMessage());

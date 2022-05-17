@@ -202,9 +202,10 @@
                 $req = $bdd->prepare('SELECT * FROM article 
                 WHERE id_art = :id_art;');
                 $req->execute(array(
-                    "id_art" => $this->getId(),
+                    "id_art" => $this->getId()
                 ));
-                return $req->fetch(PDO::FETCH_OBJ);
+                $data  = $req->fetch(PDO::FETCH_OBJ);
+                return $data;
             }
             catch(Exception $e){
                 die('Erreur : '.$e->getMessage());

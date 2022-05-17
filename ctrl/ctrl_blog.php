@@ -4,7 +4,7 @@
 
     /* ------------------------------ LOGIQUE ------------------------------ */
     $all = new Article(null, null, null, null, null, null, null);
-    $liste = $all->getAllArticle($bdd);
+    $tab = $all->getAllArticle($bdd);
     // on verifie si un utilisateur est connecté
     // on ouvre la div qui vacontenir les card article
     echo '<div calss="container d-flex flex-wrap">
@@ -29,7 +29,7 @@
                         </div>
                     </div>
                 </div>';
-            }
+            }        
         }
         else{
             foreach($liste as $val){
