@@ -61,10 +61,5 @@ if (isset($_POST['nom_prod']) && !empty($_POST['nom_prod'])
     $produit->setType($_POST['type']);
     $produit->updatePorduit($bdd);
 }
-
-
-
-
-
 ?>
 
