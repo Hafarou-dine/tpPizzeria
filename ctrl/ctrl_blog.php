@@ -4,7 +4,7 @@
 
     /* ------------------------------ LOGIQUE ------------------------------ */
     $all = new Article(null, null, null, null, null, null, null);
-    $tab = $all->getAllArticle($bdd);
+    $liste = $all->getAllArticle($bdd);
     // on verifie si un utilisateur est connecté
     // on ouvre la div qui vacontenir les card article
     echo '<div calss="container d-flex flex-wrap">

@@ -9,13 +9,11 @@
   <title>Jeff Pizza</title>
 </head>
 <body>
-  <div class="d-flex justify-content-center m-5">
-    <h2>Blog</h2>
-  </div>
+  <h2 class="text-center my-5">Blog</h2>
 
 
-  <div class="container  d-flex flex-row">
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+  <!-- <div class="container  d-flex flex-row">
+    <div class="row row-cols-1 row-cols-md-3 g-4"> -->
 
 </body>
 

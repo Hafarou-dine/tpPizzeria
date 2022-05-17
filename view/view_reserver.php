@@ -7,10 +7,10 @@
     <title>reserver</title>
 </head>
 <body>
-    <div class="flex-sm-row p-5">
+    <!-- <div class="flex-sm-row p-5"> -->
         <h1 class="d-flex justify-content-center">Reservation</h1>
         <h3 class="d-flex justify-content-center">Pour des grandes reservations ou pour réserver le jour même, veuillez nous apeller !</h3>
-    </div>
+    <!-- </div> -->
     <!------------------- début formulaire -------------------------------->
     <!-- mise en place du grid -->
     <div class="container shadow p-5 mb-5 bg-body rounded">
@@ -78,6 +78,7 @@
             </div>
         </form>
     <!-- fin du grid -->
+    </div>
     </div>
     <!-- fin du grid -->
     <!------------------- fin formulaire -------------------------------->
