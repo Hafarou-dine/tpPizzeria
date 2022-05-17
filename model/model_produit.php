@@ -126,12 +126,12 @@
         }
 
         // Fonction qui renvoie un produit par son id
-        public function getProduitById($bdd,$id){
+        public function getProduitById($bdd){
             try{
                 $req = $bdd->prepare('SELECT * FROM produit 
                 WHERE id_prod = :id_prod');
                 $req->execute(array(
-                    'id_prod'=> $id
+                    'id_prod'=> $this->getId()
                 ));
                 return $req->fetch(PDO::FETCH_OBJ);
             }
