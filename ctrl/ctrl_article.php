@@ -29,31 +29,48 @@
                         </div>
                     </div>';
 
-
-
-                    echo '<div class="col-6 col-md-4">
+                
+                    $com = new Commentaire(null, null,null,null,null);
+                    $com->setArt($_GET['id']);
+                    $tab_com = $com->getAllComByArticle($bdd);
+                    echo '<div class="col-6 col-md-4">';
+                    foreach ($tab_com as $value) {
+                        echo'
                         <ul>
-                            <li class="li-grid list-group-item shadow mb-3 bg-body rounded" id="liste">
-                                <span id="nom"></span>
-                                <span>This is a wider card with supporting text below as a natural lead-in to
-                                    additional content. This content is a little bit longer. Contrary to popular
-                                    belief</span>
+                            <li class="li-grid list-group-item shadow mb-3 bg-body rounded overflow-auto" id="liste">
+                                <span id="nom">'.$value->pseudo_com.'</span>
+                                <span>'.$value->texte_com.'</span>
+                                <span>'.$value->date_com.'</span>
                             </li>
-                        </ul>
+                        </ul>';
+                    }
 
-                        <div class="card d-flex align-items-end m-5">
+                        echo '<div class="card d-flex align-items-end m-5">
                             <div class="card-body w-100">
                                 <form action="" method="post">
-                                    <input type="text" class="form-control" name="nom_commentaire" placeholder="Nom"
+                                    <input type="text" class="form-control" name="pseudo_com" placeholder="Nom"
                                         style="width:25%; height:25%"></p>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" name="texte_com" rows="3"
                                         placeholder="Commenatire"></textarea>
                                     <input id="Vrt" type="submit" value="Ajouter Commentaire" name="voir_article" class="m-1">
                                 </form>
-
                             </div>
                         </div>
                     </div>';
-    }
+
+
+                    if(isset($_POST['pseudo_com']) && !empty($_POST['pseudo_com']) &&
+                    isset($_POST['texte_com']) && !empty($_POST['texte_com'])){
+                    $com = new Commentaire(null, null,null,null,null);
+                    $com->setPseudo($_POST['pseudo_com']);
+                    $com->setCom($_POST['texte_com']);
+                    $date = date("Y-m-d H:i:s");
+                    $com->setDate($date);
+
+                    $com->addCom($bdd,$_SESSION['id'],$_GET['id']);
+
+
+                    }
+                }
 ?>
 
